@@ -1,4 +1,4 @@
-package repository;
+package caso1.formativa.repository;
 
 import caso1.formativa.model.Producto;
 import org.springframework.stereotype.Repository;
@@ -11,20 +11,20 @@ public class ProductoRepository {
 
     // lista(arreglo) que guarda en una "base de datos" local los productos
     // ingresados en la cesion
-    private List<Producto> listaProductos = new ArrayList<>();
+    private List<Producto> listaProducto = new ArrayList<>();
 
     // metodo que retorna la lista de productos
     public List<Producto> obtenerProductos() {
-        return listaProductos;
+        return listaProducto;
     }
 
     public Producto guardar(Producto pro) { 
-        listaProductos.add(pro);
+        listaProducto.add(pro);
         return pro;
     }
 
-    public void eliminar(String nom) { 
+    public void eliminar(int id) { 
 
-        listaProductos.removeIf(x -> x.getNombre() == nom);
+        listaProducto.removeIf(x -> x.getId() == id);
     }
 }

@@ -1,7 +1,7 @@
-package service;
+package caso1.formativa.service;
 
 import caso1.formativa.model.Producto;
-import repository.ProductoRepository;
+import caso1.formativa.repository.ProductoRepository;
 
 import java.util.List;
 
@@ -21,8 +21,8 @@ public class ProductoService {
         return productoRepository.guardar(producto);
     }
 
-    public String deleteProducto(String nom) {
-        productoRepository.eliminar(nom);
+    public String deleteProducto(int id) {
+        productoRepository.eliminar(id);
         return "Producto eliminado";
     }
 }

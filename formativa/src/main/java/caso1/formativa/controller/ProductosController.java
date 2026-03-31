@@ -1,6 +1,6 @@
-package controller;
+package caso1.formativa.controller;
 
-import service.ProductoService;
+import caso1.formativa.service.ProductoService;
 import caso1.formativa.model.Producto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -25,8 +25,8 @@ public class ProductosController {
     }
 
     @DeleteMapping("{nom}")
-    public String eliminarProducto(@PathVariable String nom) {
-        return productoService.deleteProducto(nom);
+    public String eliminarProducto(@PathVariable int id) {
+        return productoService.deleteProducto(id);
     }
 
 
