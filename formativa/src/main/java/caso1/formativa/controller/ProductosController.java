@@ -24,7 +24,7 @@ public class ProductosController {
         return productoService.saveProducto(producto);
     }
 
-    @DeleteMapping("{nom}")
+    @DeleteMapping("{id}")
     public String eliminarProducto(@PathVariable int id) {
         return productoService.deleteProducto(id);
     }
